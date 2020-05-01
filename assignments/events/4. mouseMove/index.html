@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move</title>
+    <style>
+        .container{
+            max-width: 500px;
+            margin: 0 auto;
+            border: 8px solid lightgreen;
+            height: 70vh;
+            padding: 50px;
+        }
+
+        h1{
+            font-size: 48px;
+            text-align:  center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Move Mourse Cursor</h1>
+        <p class="screenX"></p>
+        <p class="screenY"></p>
+        <p class="clientX"></p>
+        <p class="clientY"></p>
+    </div>
+    <script>
+        const container = document.querySelector(".container");
+        const screenX = document.querySelector(".screenX");
+        const screenY = document.querySelector(".screenY");
+        const clientX =  document.querySelector(".clientX");
+        const clientY = document.querySelector(".clientY");
+
+        container.addEventListener("mousemove",function(event){
+            screenX.textContent = event.screenX;
+            screenY.textContent = event.screenY;
+            clientX.textContent = event.clientX;
+            clientY.textContent = event.clientY;
+        })
+    </script>
+</body>
+</html>

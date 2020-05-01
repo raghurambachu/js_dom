@@ -1,6 +1,23 @@
 var quotes;
 
 // Write your code here
+const quoteAuthor = document.querySelector(".quoteAuthor");
+const quoteText =  document.querySelector(".quoteText");
+
+
+
+function getRandomQuote(){
+    let index = Math.floor(Math.random() * quotes.length);
+    return quotes[index];
+}
+
+document.addEventListener("keypress",function(event){
+    if(event.code != "Space") return;
+    let quoteObject = getRandomQuote();
+
+    quoteAuthor.textContent = quoteObject.quoteAuthor;
+    quoteText.textContent = quoteObject.quoteText;
+})
 
 
 

@@ -39,5 +39,19 @@
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
     // Your code goes here
+
+    ul.firstElementChild.style.backgroundColor = "green";
+
+    const allLis = ul.querySelectorAll("li");
+    allLis.forEach(li => li.style.backgroundColor = "red");
+
+    allLis[allLis.length - 1].style.backgroundColor = "pink"; 
+
+    //Select the middle Li
+    const middleLi = allLis[Math.floor(allLis.length/2)];
+    console.log(middleLi);
+
+    middleLi.previousSibling.previousSibling.style.backgroundColor = "coral";
+    middleLi.nextSibling.nextSibling.style.backgroundColor = "aquamarine";
   </script>
 </html>
