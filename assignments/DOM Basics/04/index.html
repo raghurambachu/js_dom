@@ -3,6 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>About Me</title>
+    <style>
+      .listitem{
+        color: red;
+      }
+
+      img{
+        width: 400px;
+        height: 300px;
+      }
+    </style>
   </head>
   <body>
     <h1>About Me</h1>
@@ -12,5 +22,41 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+    <script>
+      document.body.style.fontFamily = "Arial,sans-serif";
+
+      const nickName = document.querySelector("#nickname");
+      const favorite = document.querySelector("#favorites");
+      const homeTown = document.querySelector("#hometown");
+
+      nickName.textContent = "Raghuram";
+      favorite.textContent = "Playing & Cycling";
+      homeTown.textContent = "Navi Mumbai";
+
+      let allLis = document.querySelectorAll("li");
+      allLis.forEach(li => {
+        li.className = "listitem";
+      
+      })
+
+      let imageElement = document.createElement("img");
+      imageElement.setAttribute("src","https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png");
+      document.body.append(imageElement);
+
+
+
+      //Updating the google style
+      //To be done on separate google page.
+      let googleLogoSrc = document.querySelector("#hplogo");
+      googleLogoSrc.removeAttribute("srcset");
+      googleLogoSrc.setAttribute("src","https://casscommunity3.files.wordpress.com/2017/06/yahoo-logo.png");
+
+      const googleSearchBtn = document.querySelector(".gNO89b");
+      googleSearchBtn.value = "Yahooo!";
+
+      let feelingLucky = document.querySelector('input[name="btnI"]');
+      feelingLucky.value = "I'm Lucky";
+      
+    </script>
   </body>
 </html>

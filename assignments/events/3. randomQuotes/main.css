@@ -1,0 +1,23 @@
+body{
+    background-color: #ffc600;
+    font-family: 'Abel', sans-serif;
+}
+
+h1{
+    font-size: 48px;
+}
+
+.container{
+    max-width: 380px;
+    margin: 0 auto;
+    border: 2px dashed blue;
+    padding: 25px ;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    font-size: 24px;
+}
